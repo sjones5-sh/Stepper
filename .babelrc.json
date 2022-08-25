@@ -1,0 +1,34 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "exclude": [
+          "transform-typeof-symbol"
+        ]
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-async-to-generator",
+    [
+      "@babel/transform-runtime"
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-class-properties",
+    [
+      "formatjs",
+      {
+        "ast": true
+      }
+    ],
+    "@loadable/babel-plugin"
+  ]
+}

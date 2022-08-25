@@ -1,0 +1,40 @@
+node_modules/
+build/
+lib/
+reports/
+
+# misc
+.DS_Store
+.env.*.local
+.idea
+.vscode
+.editorconfig
+.project
+.settings
+
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# storybook
+/storybook-static
+
+# styleguide
+/styleguide
+/configs/SGWrapper-compiled.js
+
+# misc
+.DS_Store
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+version
