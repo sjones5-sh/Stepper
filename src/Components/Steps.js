@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StepperContext } from './Stepper';
 
 class Steps extends Component {
-  componentDidMount() {
+  init() {
     const children = React.Children.toArray(this.props.children).filter(
       Boolean
     );
@@ -12,6 +12,16 @@ class Steps extends Component {
       ({ props: { children, render, ...config } }) => config
     );
     this.context.init(steps);
+  }
+
+  componentDidMount() {
+    return this.init();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.children.length !== prevProps.children.length) {
+      return this.init();
+    }
   }
 
   render() {

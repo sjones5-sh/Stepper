@@ -80,7 +80,7 @@ class Wizard extends Component {
   init = (steps) => {
     this.setState({ steps }, () => {
       const step = this.pathToStep(this.history.location.pathname);
-      if (step.id) {
+      if (step.id && this.state.steps.includes(step)) {
         this.setState({ step });
       } else {
         this.replace(this.ids[0]);

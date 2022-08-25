@@ -67,7 +67,7 @@ const CustomStep2 = ({ wizard, ...props }) => (
 );
 
 const storyExport = {
-  title: 'Components/Stepper/StepperBase',
+  title: 'Components/Stepper',
   component: Stepper
 };
 

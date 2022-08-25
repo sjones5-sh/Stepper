@@ -10,7 +10,9 @@ const storyExport = {
 
 export default storyExport;
 
-const Content = () => <img src={'https://i.imgur.com/JrwXoae.jpg'} />;
+const Content = () => (
+  <img src={'https://i.imgur.com/JrwXoae.jpg'} alt={'kitty-cat'} />
+);
 
 const basic = ({ complete, active, collapsible, ...args }) => {
   return (
