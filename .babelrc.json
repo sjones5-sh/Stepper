@@ -22,13 +22,6 @@
         "legacy": true
       }
     ],
-    "@babel/plugin-proposal-class-properties",
-    [
-      "formatjs",
-      {
-        "ast": true
-      }
-    ],
-    "@loadable/babel-plugin"
+    "@babel/plugin-proposal-class-properties"
   ]
 }
