@@ -1,7 +1,6 @@
 /**
  * @jest-environment jsdom
  */
-/* eslint-disable testing-library/no-node-access, testing-library/no-render-in-setup, testing-library/no-container */
 
 import React from 'react';
 import { render, act } from '@testing-library/react';

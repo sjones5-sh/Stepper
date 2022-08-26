@@ -1,7 +1,6 @@
 /**
  * @jest-environment jsdom
  */
-/* eslint-disable testing-library/no-node-access, testing-library/no-render-in-setup, testing-library/no-container */
 
 import React, { useState } from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
