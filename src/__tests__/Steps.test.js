@@ -1,3 +1,8 @@
+/**
+ * @jest-environment jsdom
+ */
+/* eslint-disable testing-library/no-node-access, testing-library/no-render-in-setup, testing-library/no-container */
+
 import React, { useState } from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -19,7 +24,7 @@ const TestStepper = () => {
     <StepperContext.Provider value={context}>
       <Steps>
         {steps.map((stepID) => (
-          <Step id={`foo-${stepID}`} />
+          <Step id={`foo-${stepID}`} key={stepID} />
         ))}
       </Steps>
       <button
@@ -73,7 +78,7 @@ describe('Steps', () => {
   });
 
   it('should render correct child if controlled', () => {
-    const rendered = render(
+    render(
       <StepperContext.Provider value={context}>
         <Steps step={{ id: 'bar' }}>
           <Step id="foo">foo</Step>
@@ -82,13 +87,12 @@ describe('Steps', () => {
       </StepperContext.Provider>
     );
 
-    expect(
-      rendered.container.querySelector('.Stepper__Step--active')
-    ).toHaveTextContent('bar');
+    expect(screen.getByText('foo')).not.toHaveClass('Stepper__Step--active');
+    expect(screen.getByText('bar')).toHaveClass('Stepper__Step--active');
   });
 
   it('should render only one child if in wizard mode', () => {
-    const rendered = render(
+    const { container } = render(
       <StepperContext.Provider
         value={{
           ...context,
@@ -101,9 +105,7 @@ describe('Steps', () => {
       </StepperContext.Provider>
     );
 
-    expect(rendered.container.querySelectorAll('.Stepper__Step')).toHaveLength(
-      1
-    );
+    expect(container.querySelectorAll('.Stepper__Step')).toHaveLength(1);
   });
 
   it('should render added step props to children', async () => {
