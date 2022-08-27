@@ -5,6 +5,9 @@
 
 Concepts from both have been implemented but `Stepper` is heavily based on `react-albus`
 
+## Demo
+See examples here: https://sjones5-sh.github.io/Stepper/
+
 ## API
 ### `<Stepper>`
 #### props
