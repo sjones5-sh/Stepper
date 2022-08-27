@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography } from '@mui/material';
+import {Box, Grid, Typography} from '@mui/material';
 import { StepContent } from '../index';
 import { StepContext } from '../Components/Step';
 
@@ -11,7 +11,9 @@ const storyExport = {
 export default storyExport;
 
 const Content = () => (
-  <img src={'https://i.imgur.com/JrwXoae.jpg'} alt={'kitty-cat'} />
+  <Box p={2} height={200} bgcolor={'primary.main'}>
+    <Typography variant={"h5"}>Content</Typography>
+  </Box>
 );
 
 const basic = ({ complete, active, collapsible, ...args }) => {
