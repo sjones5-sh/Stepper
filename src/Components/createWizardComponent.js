@@ -1,6 +1,6 @@
 import React from 'react';
 import renderCallback from '../utils/commonRender';
-import { StepperContext } from './Stepper';
+import {StepperContext} from "../utils/useStepper";
 
 const createWizardComponent = (name) => {
   const WizardComponent = (props) => (

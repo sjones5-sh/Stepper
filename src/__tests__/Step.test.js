@@ -4,7 +4,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import Step, { StepContext } from '../Components/Step';
-import { StepperContext } from '../Components/Stepper';
+import {StepperContext} from "../utils/useStepper";
 
 const context = {
   wizard: {

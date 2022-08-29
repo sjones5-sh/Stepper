@@ -9,7 +9,7 @@ import { StyledStep } from './Components/StyledStepperComponents';
 import { Navigation } from './Components/Navigation';
 
 const storyExport = {
-  title: 'Components/Stepper',
+  title: 'Stepper',
   component: Stepper
 };
 

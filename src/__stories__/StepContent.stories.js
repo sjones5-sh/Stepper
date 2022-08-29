@@ -4,7 +4,7 @@ import { StepContent } from '../index';
 import { StepContext } from '../Components/Step';
 
 const storyExport = {
-  title: 'Components/Stepper/Step',
+  title: 'Stepper/Step',
   component: StepContent
 };
 

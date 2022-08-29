@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StepperContext } from './Stepper';
+import {StepperContext} from "../utils/useStepper";
 
 class Steps extends Component {
   init() {

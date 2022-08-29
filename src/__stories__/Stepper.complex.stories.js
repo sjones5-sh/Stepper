@@ -67,7 +67,7 @@ const CustomStep2 = ({ wizard, ...props }) => (
 );
 
 const storyExport = {
-  title: 'Components/Stepper',
+  title: 'Stepper',
   component: Stepper
 };
 
@@ -81,7 +81,7 @@ const BasicContainer = styled.div`
   background-color: white;
 `;
 
-const basic = (args) => {
+const ComplexTemplate = (args) => {
   const handleStepSelect = (wizard, { id }) => {
     if (id !== wizard.step.id) {
       return wizard.set(id);
@@ -176,5 +176,5 @@ const basic = (args) => {
     </BasicContainer>
   );
 };
-export const Basic = basic.bind({});
-Basic.args = { wizard: false };
+export const Complex = ComplexTemplate.bind({});
+Complex.args = { wizard: false };

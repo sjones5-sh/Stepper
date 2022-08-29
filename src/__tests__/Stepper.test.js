@@ -8,7 +8,7 @@ import { render, act } from '@testing-library/react';
 import { Stepper, Steps, Step, WithWizard } from '../index';
 
 describe('Stepper', () => {
-  describe.skip('with no props', () => {
+  describe('with no props', () => {
     let wizard;
     let unmountComp;
     beforeEach(() => {

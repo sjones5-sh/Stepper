@@ -4,7 +4,8 @@ import Step from './Components/Step';
 import { StepContent, StepHead } from './Components/StepContent';
 import createWizardComponent from './Components/createWizardComponent';
 import withWizard from './utils/withWizard';
+import {useStepper} from "./utils/useStepper";
 
 const WithWizard = createWizardComponent('WithWizard');
 
-export { Stepper, Steps, Step, StepHead, StepContent, WithWizard, withWizard };
+export { Stepper, Steps, Step, StepHead, StepContent, WithWizard, withWizard, useStepper };

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Step, StepHead, Stepper } from '../../index';
+import {Step, StepHead, Stepper} from '../../index';
 
 export const StyledStep = styled(Step)`
   margin: 4px;
@@ -39,4 +39,9 @@ export const StyledStepHead = styled(StepHead)`
   border-bottom: #333333 1px solid;
   padding: 4px;
   background-color: #eaeaea;
+`;
+export const BasicContainer = styled.div`
+  align-items: center;
+  background-color: white;
+  max-width: 800px;
 `;

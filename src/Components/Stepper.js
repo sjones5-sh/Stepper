@@ -6,8 +6,7 @@ import PropTypes from 'prop-types';
 import { createMemoryHistory } from 'history';
 
 import renderCallback from '../utils/commonRender';
-
-export const StepperContext = React.createContext({});
+import {StepperContext} from "../utils/useStepper";
 
 class Wizard extends Component {
   state = {

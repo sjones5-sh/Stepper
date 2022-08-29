@@ -7,7 +7,7 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import { Steps, Step } from '../index';
-import { StepperContext } from '../Components/Stepper';
+import {StepperContext} from "../utils/useStepper";
 
 const context = {
   step: {
