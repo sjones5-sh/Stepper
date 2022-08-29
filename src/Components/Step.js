@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useContext, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {StepperContext} from "../utils/useStepper";
@@ -6,6 +6,10 @@ import {StepperContext} from "../utils/useStepper";
 export const StepContext = React.createContext({
   active: false
 });
+
+export const useStep = () => {
+  return useContext(StepContext);
+}
 
 const Step = (props) => (
   <StepperContext.Consumer>

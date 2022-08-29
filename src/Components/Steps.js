@@ -55,7 +55,7 @@ class Steps extends Component {
       };
 
       if (flow === 'wizard' && child.props.id !== step.id) {
-        return null;
+        return null; // Would be a good feature to kep a step mounted as an option
       }
 
       return React.cloneElement(child, stepProps);
